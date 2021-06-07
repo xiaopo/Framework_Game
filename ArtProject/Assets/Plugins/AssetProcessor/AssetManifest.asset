@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb2047e3ee331f469a9eb462f13b459, type: 3}
+  m_Name: AssetManifest
+  m_EditorClassIdentifier: 
+  m_MatchingFolder:
+  - Assets/GUI
+  - Assets/Configs
+  - Assets/Art
+  m_IgnoreFileType:
+  - meta
+  - cs
+  m_AssetList:
+  - m_AssetName: readme.txt
+    m_AssetPath: Assets/Configs/readme.txt
+  - m_AssetName: Main_Camera.prefab
+    m_AssetPath: Assets/Configs/Common/Main_Camera.prefab
+  - m_AssetName: UniversalRenderPipelineAsset_high.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_high.asset
+  - m_AssetName: UniversalRenderPipelineAsset_low.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_low.asset
+  - m_AssetName: UniversalRenderPipelineAsset_medium.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_medium.asset
+  - m_AssetName: UniversalRenderPipelineAsset_Renderer.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_Renderer.asset
+  - m_AssetName: UniversalRenderPipelineAsset_very high.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_very
+      high.asset
+  - m_AssetName: UniversalRenderPipelineAsset_verylow.asset
+    m_AssetPath: Assets/Configs/RenderPipeline/UniversalRenderPipelineAsset_verylow.asset
+  - m_AssetName: fangzhengls.TTF
+    m_AssetPath: Assets/GUI/Fonts/fangzhengls.TTF
+  - m_AssetName: Atlas_Loader.spriteatlas
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/Atlas_Loader.spriteatlas
+  - m_AssetName: common_bg_leibiao07.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/common_bg_leibiao07.png
+  - m_AssetName: common_exp_01.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/common_exp_01.png
+  - m_AssetName: dy_icon_dy02.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/dy_icon_dy02.png
+  - m_AssetName: Atlas_Loader_waitimg.spriteatlas
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/waitimg/Atlas_Loader_waitimg.spriteatlas
+  - m_AssetName: common_btn_jzgb02.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/waitimg/common_btn_jzgb02.png
+  - m_AssetName: common_jz_bg_01.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/waitimg/common_jz_bg_01.png
+  - m_AssetName: jzz_03.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/waitimg/jzz_03.png
+  - m_AssetName: jzz_05_mask.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Images/waitimg/jzz_05_mask.png
+  - m_AssetName: GUI_CommonLoad_View.prefab
+    m_AssetPath: Assets/GUI/Modules/Loader/Prefabs/GUI_CommonLoad_View.prefab
+  - m_AssetName: gui_mapload_normal_view.prefab
+    m_AssetPath: Assets/GUI/Modules/Loader/Prefabs/gui_mapload_normal_view.prefab
+  - m_AssetName: loadBg_1.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Single/loadBg_1.png
+  - m_AssetName: loadBg_2.png
+    m_AssetPath: Assets/GUI/Modules/Loader/Single/loadBg_2.png
+  - m_AssetName: Atlas_Login.spriteatlas
+    m_AssetPath: Assets/GUI/Modules/Login/Images/Atlas_Login.spriteatlas
+  - m_AssetName: ch_04_wz.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/ch_04_wz.png
+  - m_AssetName: ch_btn_jryx_text_copy.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/ch_btn_jryx_text_copy.png
+  - m_AssetName: XJ_07.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/XJ_07.png
+  - m_AssetName: zhdl_01.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/zhdl_01.png
+  - m_AssetName: zhdl_03.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/zhdl_03.png
+  - m_AssetName: gui_login_register.prefab
+    m_AssetPath: Assets/GUI/Modules/Login/Prefabs/gui_login_register.prefab
+  - m_AssetName: gui_login_view.prefab
+    m_AssetPath: Assets/GUI/Modules/Login/Prefabs/gui_login_view.prefab
+  - m_AssetName: Atlas_Mainui.spriteatlas
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/Atlas_Mainui.spriteatlas
+  - m_AssetName: bb_bg_dikuang.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/bb_bg_dikuang.png
+  - m_AssetName: b_dyts.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/b_dyts.png
+  - m_AssetName: b_fql.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/b_fql.png
+  - m_AssetName: common_adorn_tchuo.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/common_adorn_tchuo.png
+  - m_AssetName: goumaishouhu.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/goumaishouhu.png
+  - m_AssetName: kuafuxianmengboss.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/kuafuxianmengboss.png
+  - m_AssetName: sc_bg_qipao.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/sc_bg_qipao.png
+  - m_AssetName: zjm_tb05_text.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/zjm_tb05_text.png
+  - m_AssetName: zjm_tb37_text.png
+    m_AssetPath: Assets/GUI/Modules/Mainui/Images/zjm_tb37_text.png
+  - m_AssetName: gui_mainui_main.prefab
+    m_AssetPath: Assets/GUI/Modules/Mainui/Prefabs/gui_mainui_main.prefab
+  - m_AssetName: Atlas_Pack.spriteatlas
+    m_AssetPath: Assets/GUI/Modules/Pack/Images/Atlas_Pack.spriteatlas
+  - m_AssetName: common_btn_guanbi01.png
+    m_AssetPath: Assets/GUI/Modules/Pack/Images/common_btn_guanbi01.png
+  - m_AssetName: ps__icon_1.png
+    m_AssetPath: Assets/GUI/Modules/Pack/Images/ps__icon_1.png
+  - m_AssetName: sp_06.png
+    m_AssetPath: Assets/GUI/Modules/Pack/Images/sp_06.png
+  - m_AssetName: PackUIView.prefab
+    m_AssetPath: Assets/GUI/Modules/Pack/Prefabs/PackUIView.prefab
+  - m_AssetName: AssetBundleView.prefab
+    m_AssetPath: Assets/GUI/Modules/Profile/Prefabs/AssetBundleView.prefab
