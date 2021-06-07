@@ -1,0 +1,12 @@
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.exe
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.deps.json
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.runtimeconfig.json
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.runtimeconfig.dev.json
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.dll
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\win-x86\LuaTemplateGen.pdb
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.AssemblyInfoInputs.cache
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.AssemblyInfo.cs
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.csproj.CoreCompileInputs.cache
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.dll
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.pdb
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\obj\Release\netcoreapp3.1\win-x86\LuaTemplateGen.genruntimeconfig.cache

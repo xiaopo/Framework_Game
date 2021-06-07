@@ -1,0 +1,4 @@
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\publish\LuaTemplateGen.exe
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\publish\LuaTemplateGen.dll
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\publish\LuaTemplateGen.deps.json
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Release\netcoreapp3.1\publish\LuaTemplateGen.runtimeconfig.json

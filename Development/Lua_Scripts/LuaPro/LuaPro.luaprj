@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Project Name="LuaPro.luaprj" Cmd="" Arg="" Dir="" Toggle="false" >
+    <Filter RelativePath=".\.." Toggle="false" >
+        <Filter RelativePath=".\game" Toggle="false" >
+            <LuaFile RelativePath=".\global.lua" />
+            <LuaFile RelativePath=".\main.lua" />
+            <LuaFile RelativePath=".\require.lua" />
+            <Filter RelativePath=".\components" Toggle="false" >
+                <LuaFile RelativePath=".\ListTreeMxNView.lua" />
+                <LuaFile RelativePath=".\ListTreeMxNViewEx.lua" />
+                <LuaFile RelativePath=".\ListView.lua" />
+                <LuaFile RelativePath=".\Loader.lua" />
+                <LuaFile RelativePath=".\TabView.lua" />
+                <Filter RelativePath=".\renderers" Toggle="true" />
+            </Filter>
+            <Filter RelativePath=".\config" Toggle="true" >
+                <LuaFile RelativePath=".\t_attribute.lua" />
+                <LuaFile RelativePath=".\t_firework_activity_config.lua" />
+                <LuaFile RelativePath=".\t_item_total.lua" />
+                <LuaFile RelativePath=".\t_treasure_hunt_reward.lua" />
+            </Filter>
+            <Filter RelativePath=".\defines" Toggle="true" >
+                <LuaFile RelativePath=".\EventDefine.lua" />
+                <LuaFile RelativePath=".\GlobalDefine.lua" />
+                <LuaFile RelativePath=".\MDefine.lua" />
+                <LuaFile RelativePath=".\TagDefine.lua" />
+                <LuaFile RelativePath=".\UIDefine.lua" />
+            </Filter>
+            <Filter RelativePath=".\framework" Toggle="false" >
+                <LuaFile RelativePath=".\Command.lua" />
+                <LuaFile RelativePath=".\Context.lua" />
+                <LuaFile RelativePath=".\Dispatcher.lua" />
+                <LuaFile RelativePath=".\EventDispatcher.lua" />
+                <LuaFile RelativePath=".\Module.lua" />
+                <LuaFile RelativePath=".\View.lua" />
+                <Filter RelativePath=".\funcs" Toggle="true" >
+                    <LuaFile RelativePath=".\Adaptfunc.lua" />
+                    <LuaFile RelativePath=".\CloneFunc.lua" />
+                    <LuaFile RelativePath=".\ListTweenfunc.lua" />
+                    <LuaFile RelativePath=".\Loaderfunc.lua" />
+                    <LuaFile RelativePath=".\Maskfunc.lua" />
+                    <LuaFile RelativePath=".\readme.txt" />
+                    <LuaFile RelativePath=".\SplitSysfun.lua" />
+                    <LuaFile RelativePath=".\Timerfunc.lua" />
+                    <LuaFile RelativePath=".\Tweenfunc.lua" />
+                    <LuaFile RelativePath=".\ViewControlsfunc.lua" />
+                    <LuaFile RelativePath=".\Viewfunc.lua" />
+                    <LuaFile RelativePath=".\ViewEventsfunc.lua" />
+                </Filter>
+                <Filter RelativePath=".\gui" Toggle="true" >
+                    <LuaFile RelativePath=".\GUIAdaptLayer.lua" />
+                    <LuaFile RelativePath=".\GUIConfig.lua" />
+                    <LuaFile RelativePath=".\GUILayer.lua" />
+                    <LuaFile RelativePath=".\GUIManager.lua" />
+                    <LuaFile RelativePath=".\GUIPanel.lua" />
+                    <LuaFile RelativePath=".\GUISRendererLayer.lua" />
+                    <LuaFile RelativePath=".\GUITouchLayer.lua" />
+                    <LuaFile RelativePath=".\GUIView.lua" />
+                    <LuaFile RelativePath=".\GUIWindow.lua" />
+                    <LuaFile RelativePath=".\readme.txt" />
+                </Filter>
+            </Filter>
+            <Filter RelativePath=".\managers" Toggle="true" >
+                <LuaFile RelativePath=".\TimeManager.lua" />
+            </Filter>
+            <Filter RelativePath=".\modules" Toggle="false" >
+                <LuaFile RelativePath=".\module_register.lua" />
+                <Filter RelativePath=".\loader" Toggle="false" >
+                    <Filter RelativePath=".\views" Toggle="false" >
+                        <LuaFile RelativePath=".\CommonLoadView.lua" />
+                        <LuaFile RelativePath=".\MapLoaderView.lua" />
+                    </Filter>
+                    <LuaFile RelativePath=".\LoaderConfig.lua" />
+                    <LuaFile RelativePath=".\LoaderData.lua" />
+                    <LuaFile RelativePath=".\LoaderModule.lua" />
+                    <LuaFile RelativePath=".\LoaderProxy.lua" />
+                </Filter>
+                <Filter RelativePath=".\login" Toggle="false" >
+                    <LuaFile RelativePath=".\LoginConfig.lua" />
+                    <LuaFile RelativePath=".\LoginData.lua" />
+                    <LuaFile RelativePath=".\LoginModule.lua" />
+                    <LuaFile RelativePath=".\LoginProxy.lua" />
+                    <Filter RelativePath=".\views" Toggle="true" >
+                        <LuaFile RelativePath=".\LoginAccountView.lua" />
+                        <LuaFile RelativePath=".\LoginView.lua" />
+                    </Filter>
+                </Filter>
+                <Filter RelativePath=".\mapfight" Toggle="false" >
+                    <LuaFile RelativePath=".\MapfightModule.lua" />
+                    <Filter RelativePath=".\config" Toggle="true" >
+                        <LuaFile RelativePath=".\MapfightConfig.lua" />
+                    </Filter>
+                    <Filter RelativePath=".\fight" Toggle="true" />
+                    <Filter RelativePath=".\proxy" Toggle="true" >
+                        <LuaFile RelativePath=".\MapfightProxy.lua" />
+                    </Filter>
+                    <Filter RelativePath=".\scene" Toggle="true" >
+                        <LuaFile RelativePath=".\GameMapController.lua" />
+                        <LuaFile RelativePath=".\GameMapLoader.lua" />
+                    </Filter>
+                    <Filter RelativePath=".\views" Toggle="true" />
+                </Filter>
+                <Filter RelativePath=".\mainui" Toggle="false" >
+                    <LuaFile RelativePath=".\MainuiConfig.lua" />
+                    <LuaFile RelativePath=".\MainuiData.lua" />
+                    <LuaFile RelativePath=".\MainuiModule.lua" />
+                    <LuaFile RelativePath=".\MainuiProxy.lua" />
+                    <Filter RelativePath=".\views" Toggle="true" >
+                        <LuaFile RelativePath=".\MainuiView.lua" />
+                    </Filter>
+                </Filter>
+                <Filter RelativePath=".\pack" Toggle="false" >
+                    <LuaFile RelativePath=".\PackConfig.lua" />
+                    <LuaFile RelativePath=".\PackData.lua" />
+                    <LuaFile RelativePath=".\PackModule.lua" />
+                    <LuaFile RelativePath=".\PackProxy.lua" />
+                    <Filter RelativePath=".\views" Toggle="true" >
+                        <LuaFile RelativePath=".\PackView.lua" />
+                    </Filter>
+                </Filter>
+            </Filter>
+            <Filter RelativePath=".\network" Toggle="true" />
+            <Filter RelativePath=".\profile" Toggle="false" >
+                <Filter RelativePath=".\snapshotDump" Toggle="true" >
+                    <LuaFile RelativePath=".\Example.lua" />
+                    <LuaFile RelativePath=".\MemoryReferenceInfo.lua" />
+                </Filter>
+            </Filter>
+            <Filter RelativePath=".\unityEngine" Toggle="true" >
+                <LuaFile RelativePath=".\Mathf.lua" />
+                <LuaFile RelativePath=".\Quaternion.lua" />
+                <LuaFile RelativePath=".\Time.lua" />
+                <LuaFile RelativePath=".\UEngineImport.lua" />
+                <LuaFile RelativePath=".\Vector2.lua" />
+                <LuaFile RelativePath=".\Vector3.lua" />
+            </Filter>
+            <Filter RelativePath=".\utilitys" Toggle="true" >
+                <LuaFile RelativePath=".\bit.lua" />
+                <LuaFile RelativePath=".\CenterServerUtility.lua" />
+                <LuaFile RelativePath=".\Dict.lua" />
+                <LuaFile RelativePath=".\Dump.lua" />
+                <LuaFile RelativePath=".\GUID.lua" />
+                <LuaFile RelativePath=".\Linqnear.lua" />
+                <LuaFile RelativePath=".\SystemClass.lua" />
+                <LuaFile RelativePath=".\SystemUtility.lua" />
+                <LuaFile RelativePath=".\Util.lua" />
+            </Filter>
+        </Filter>
+        <Filter RelativePath=".\LuaPro" Toggle="true" />
+        <Filter RelativePath=".\LuaTemplateGen" Toggle="true" />
+        <Filter RelativePath=".\template" Toggle="true" >
+            <LuaFile RelativePath=".\command_template.lua" />
+            <LuaFile RelativePath=".\config_template.lua" />
+            <LuaFile RelativePath=".\content_renderer_template.lua" />
+            <LuaFile RelativePath=".\data_template.lua" />
+            <LuaFile RelativePath=".\define_template.lua" />
+            <LuaFile RelativePath=".\list_renderer_template.lua" />
+            <LuaFile RelativePath=".\module_template.lua" />
+            <LuaFile RelativePath=".\panel_template.lua" />
+            <LuaFile RelativePath=".\proxy_template.lua" />
+            <LuaFile RelativePath=".\view_template.lua" />
+            <LuaFile RelativePath=".\window_template.lua" />
+        </Filter>
+    </Filter>
+</Project>

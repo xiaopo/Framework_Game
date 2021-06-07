@@ -1,0 +1,2 @@
+local MainuiData = {}
+return  MainuiData

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bd5s7cmUC6D0T//9lwaSIyxjDXivjD2L7Dv0RT/Swf2P2D5uYmdfBG2CcpULYkMLRPZRAeRSSP5A9WuN6zyLHQ==",
+  "success": true,
+  "projectFilePath": "E:\\work_SGL_1\\arpg_game\\FrameworkTools\\LuaTemplateGen\\LuaTemplateGen\\LuaTemplateGen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.11\\microsoft.netcore.app.runtime.win-x64.3.1.11.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.11\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.11.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.11\\microsoft.aspnetcore.app.runtime.win-x64.3.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}

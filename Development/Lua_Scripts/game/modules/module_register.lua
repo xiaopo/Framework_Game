@@ -1,0 +1,6 @@
+local context = require( 'game.framework.Context' ) 
+context.registerModule('game.modules.loader.LoaderModule')
+context.registerModule('game.modules.login.LoginModule')
+context.registerModule('game.modules.mainui.MainuiModule')
+context.registerModule('game.modules.mapfight.MapfightModule')
+context.registerModule('game.modules.pack.PackModule')

@@ -1,0 +1,263 @@
+﻿
+
+<linker>
+
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="ResolutionDefine" preserve="all"/>
+		<type fullname="EventSystemManager" preserve="all"/>
+		<type fullname="LuaCoroutine" preserve="all"/>
+		<type fullname="TimerManager" preserve="all"/>
+		<type fullname="UGUIExtension" preserve="all"/>
+		<type fullname="UnityExtension" preserve="all"/>
+		<type fullname="SelectedObjectHelper" preserve="all"/>
+		<type fullname="SUtility" preserve="all"/>
+		<type fullname="XDefine" preserve="all"/>
+		<type fullname="XLogger" preserve="all"/>
+		<type fullname="GameCameraUtiliy" preserve="all"/>
+		<type fullname="UCamera" preserve="all"/>
+		<type fullname="LocalCacheUtility" preserve="all"/>
+		<type fullname="SFileUtility" preserve="all"/>
+		<type fullname="XMobileUtility" preserve="all"/>
+		<type fullname="AssetManagement.AssetUtility" preserve="all"/>
+		<type fullname="AssetManagement.AssetLoaderParcel" preserve="all"/>
+		<type fullname="FDeltaFPS" preserve="all"/>
+		<type fullname="ActionX`1[System.Boolean]" preserve="all"/>
+		<type fullname="ActionX`1[System.Int32]" preserve="all"/>
+		<type fullname="ActionX`2[System.Int32,System.Collections.Generic.List`1[UnityEngine.Vector3]]" preserve="all"/>
+		<type fullname="ActionX`3[System.Int32,System.Int32,System.Collections.Generic.List`1[UnityEngine.Vector3]]" preserve="all"/>
+		<type fullname="ActionX`2[System.Int32,System.String]" preserve="all"/>
+		<type fullname="TimerManager+Tick" preserve="all"/>
+		<type fullname="CSharpLuaInterface+Language" preserve="all"/>
+		<type fullname="LauncherGUIManager" preserve="all"/>
+		<type fullname="LauncherGUIAlrt" preserve="all"/>
+		<type fullname="LauncherGUIPage" preserve="all"/>
+		<type fullname="ProfileGUIManager" preserve="all"/>
+		<type fullname="XGUI.XListView" preserve="all"/>
+		<type fullname="XGUI.XListView+ListItemRenderer" preserve="all"/>
+		<type fullname="XGUI.XListTreeView" preserve="all"/>
+		<type fullname="XGUI.TreeItem" preserve="all"/>
+		<type fullname="XGUI.TreeItemInfo" preserve="all"/>
+		<type fullname="XGUI.XView" preserve="all"/>
+		<type fullname="XGUI.XImage" preserve="all"/>
+		<type fullname="XGUI.XImageSequence" preserve="all"/>
+		<type fullname="XGUI.XToggle" preserve="all"/>
+		<type fullname="XGUI.XButton" preserve="all"/>
+		<type fullname="XGUI.XButtonGroup" preserve="all"/>
+		<type fullname="XGUI.XScrollRect" preserve="all"/>
+		<type fullname="XGUI.XViewport" preserve="all"/>
+		<type fullname="XGUI.XViewport+ViewportChangeEvent" preserve="all"/>
+		<type fullname="XGUI.XTiledImage" preserve="all"/>
+		<type fullname="XGUI.XTouchClick" preserve="all"/>
+		<type fullname="XGUI.XTouchDrag" preserve="all"/>
+		<type fullname="XGUI.XNoDrawingView" preserve="all"/>
+		<type fullname="XGUI.XLoader" preserve="all"/>
+		<type fullname="XGUI.XSortingOrder" preserve="all"/>
+		<type fullname="XGUI.XTouchRotTarget" preserve="all"/>
+		<type fullname="XGUI.XProgressImage" preserve="all"/>
+		<type fullname="XGUI.XProgress" preserve="all"/>
+		<type fullname="XGUI.XProgressEffect" preserve="all"/>
+		<type fullname="XGUI.XInputField" preserve="all"/>
+		<type fullname="XGUI.XClickComponent" preserve="all"/>
+		<type fullname="XGUI.XSpriteMaskOrder" preserve="all"/>
+		<type fullname="XGUI.XImageNode" preserve="all"/>
+		<type fullname="XGUI.XImageGroup" preserve="all"/>
+		<type fullname="Map.LoadMapMode" preserve="all"/>
+		<type fullname="Map.GameMapLoader" preserve="all"/>
+		<type fullname="Map.SingleSceneLoader" preserve="all"/>
+		<type fullname="ResolutionDefine" preserve="all"/>
+		<type fullname="EventSystemManager" preserve="all"/>
+		<type fullname="LuaCoroutine" preserve="all"/>
+		<type fullname="TimerManager" preserve="all"/>
+		<type fullname="UGUIExtension" preserve="all"/>
+		<type fullname="UnityExtension" preserve="all"/>
+		<type fullname="SelectedObjectHelper" preserve="all"/>
+		<type fullname="SUtility" preserve="all"/>
+		<type fullname="XDefine" preserve="all"/>
+		<type fullname="XLogger" preserve="all"/>
+		<type fullname="GameCameraUtiliy" preserve="all"/>
+		<type fullname="UCamera" preserve="all"/>
+		<type fullname="LocalCacheUtility" preserve="all"/>
+		<type fullname="SFileUtility" preserve="all"/>
+		<type fullname="XMobileUtility" preserve="all"/>
+		<type fullname="AssetManagement.AssetUtility" preserve="all"/>
+		<type fullname="AssetManagement.AssetLoaderParcel" preserve="all"/>
+		<type fullname="FDeltaFPS" preserve="all"/>
+		<type fullname="LauncherGUIManager" preserve="all"/>
+		<type fullname="LauncherGUIAlrt" preserve="all"/>
+		<type fullname="LauncherGUIPage" preserve="all"/>
+		<type fullname="ProfileGUIManager" preserve="all"/>
+		<type fullname="XGUI.XListView" preserve="all"/>
+		<type fullname="XGUI.XListView+ListItemRenderer" preserve="all"/>
+		<type fullname="XGUI.XListTreeView" preserve="all"/>
+		<type fullname="XGUI.TreeItem" preserve="all"/>
+		<type fullname="XGUI.TreeItemInfo" preserve="all"/>
+		<type fullname="XGUI.XView" preserve="all"/>
+		<type fullname="XGUI.XImage" preserve="all"/>
+		<type fullname="XGUI.XImageSequence" preserve="all"/>
+		<type fullname="XGUI.XToggle" preserve="all"/>
+		<type fullname="XGUI.XButton" preserve="all"/>
+		<type fullname="XGUI.XButtonGroup" preserve="all"/>
+		<type fullname="XGUI.XScrollRect" preserve="all"/>
+		<type fullname="XGUI.XViewport" preserve="all"/>
+		<type fullname="XGUI.XViewport+ViewportChangeEvent" preserve="all"/>
+		<type fullname="XGUI.XTiledImage" preserve="all"/>
+		<type fullname="XGUI.XTouchClick" preserve="all"/>
+		<type fullname="XGUI.XTouchDrag" preserve="all"/>
+		<type fullname="XGUI.XNoDrawingView" preserve="all"/>
+		<type fullname="XGUI.XLoader" preserve="all"/>
+		<type fullname="XGUI.XSortingOrder" preserve="all"/>
+		<type fullname="XGUI.XTouchRotTarget" preserve="all"/>
+		<type fullname="XGUI.XProgressImage" preserve="all"/>
+		<type fullname="XGUI.XProgress" preserve="all"/>
+		<type fullname="XGUI.XProgressEffect" preserve="all"/>
+		<type fullname="XGUI.XInputField" preserve="all"/>
+		<type fullname="XGUI.XClickComponent" preserve="all"/>
+		<type fullname="XGUI.XSpriteMaskOrder" preserve="all"/>
+		<type fullname="XGUI.XImageNode" preserve="all"/>
+		<type fullname="XGUI.XImageGroup" preserve="all"/>
+		<type fullname="Map.LoadMapMode" preserve="all"/>
+		<type fullname="Map.GameMapLoader" preserve="all"/>
+		<type fullname="Map.SingleSceneLoader" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.CoreModule">
+	    <type fullname="UnityEngine.WaitForSeconds" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEvent" preserve="all"/>
+		<type fullname="UnityEngine.RenderTexture" preserve="all"/>
+		<type fullname="UnityEngine.Application" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEventBase" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEvent`2[System.String,UnityEngine.GameObject]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEvent`2[System.Int32,System.Int32]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.String]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[System.Int32]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`2[System.Int32,System.Int32]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[System.Boolean]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[System.Single]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[System.String]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`2[System.String,System.Boolean]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[System.Object]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[UnityEngine.EventSystems.BaseEventData]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`2[System.String,UnityEngine.GameObject]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[UnityEngine.EventSystems.PointerEventData]" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityAction`1[UnityEngine.Vector2]" preserve="all"/>
+		<type fullname="UnityEngine.WaitForSeconds" preserve="all"/>
+		<type fullname="UnityEngine.Events.UnityEvent" preserve="all"/>
+		<type fullname="UnityEngine.RenderTexture" preserve="all"/>
+		<type fullname="UnityEngine.Application" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.ImageConversionModule">
+	    <type fullname="UnityEngine.ImageConversion" preserve="all"/>
+		<type fullname="UnityEngine.ImageConversion" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.Physics2DModule">
+	    <type fullname="UnityEngine.Joint2D" preserve="all"/>
+		<type fullname="UnityEngine.HingeJoint2D" preserve="all"/>
+		<type fullname="UnityEngine.AnchoredJoint2D" preserve="all"/>
+		<type fullname="UnityEngine.Rigidbody2D" preserve="all"/>
+		<type fullname="UnityEngine.Joint2D" preserve="all"/>
+		<type fullname="UnityEngine.HingeJoint2D" preserve="all"/>
+		<type fullname="UnityEngine.AnchoredJoint2D" preserve="all"/>
+		<type fullname="UnityEngine.Rigidbody2D" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="mscorlib">
+	    <type fullname="System.Action" preserve="all"/>
+		<type fullname="System.Action`1[System.Int32]" preserve="all"/>
+		<type fullname="System.Action`2[System.Int32,System.Int32]" preserve="all"/>
+		<type fullname="System.Action`2[System.Int32,System.Boolean]" preserve="all"/>
+		<type fullname="System.Action`3[System.Int32,System.Boolean,System.Boolean]" preserve="all"/>
+		<type fullname="System.Action`2[System.Single,System.Single]" preserve="all"/>
+		<type fullname="System.Action`1[System.String]" preserve="all"/>
+		<type fullname="System.Action`1[System.Single]" preserve="all"/>
+		<type fullname="System.Action`1[System.Double]" preserve="all"/>
+		<type fullname="System.Action`1[System.Boolean]" preserve="all"/>
+		<type fullname="System.Action`1[System.Object]" preserve="all"/>
+		<type fullname="System.Action`2[System.String,UnityEngine.GameObject]" preserve="all"/>
+		<type fullname="System.Action`1[AssetManagement.AssetLoaderParcel]" preserve="all"/>
+		<type fullname="System.Func`3[System.Double,System.Double,System.Double]" preserve="all"/>
+		<type fullname="System.Action`2[System.String,System.String]" preserve="all"/>
+		<type fullname="System.Action`2[System.Int32,System.Collections.Generic.List`1[UnityEngine.Vector3]]" preserve="all"/>
+		<type fullname="System.Action`1[UnityEngine.Vector3]" preserve="all"/>
+		<type fullname="System.Collections.IEnumerator" preserve="all"/>
+		<type fullname="System.Collections.IEnumerable" preserve="all"/>
+		<type fullname="System.Action`1[XGUI.XListView+ListItemRenderer]" preserve="all"/>
+		<type fullname="System.Action`1[XGUI.XLoader+LoaderItemRenderer]" preserve="all"/>
+		<type fullname="System.Action`1[XGUI.XViewport+ViewportChangeEvent]" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DOTween">
+	    <type fullname="DG.Tweening.TweenCallback`1[System.Single]" preserve="all"/>
+		<type fullname="DG.Tweening.AutoPlay" preserve="all"/>
+		<type fullname="DG.Tweening.AxisConstraint" preserve="all"/>
+		<type fullname="DG.Tweening.Ease" preserve="all"/>
+		<type fullname="DG.Tweening.LogBehaviour" preserve="all"/>
+		<type fullname="DG.Tweening.LoopType" preserve="all"/>
+		<type fullname="DG.Tweening.PathMode" preserve="all"/>
+		<type fullname="DG.Tweening.PathType" preserve="all"/>
+		<type fullname="DG.Tweening.RotateMode" preserve="all"/>
+		<type fullname="DG.Tweening.ScrambleMode" preserve="all"/>
+		<type fullname="DG.Tweening.TweenType" preserve="all"/>
+		<type fullname="DG.Tweening.UpdateType" preserve="all"/>
+		<type fullname="DG.Tweening.DOTween" preserve="all"/>
+		<type fullname="DG.Tweening.DOVirtual" preserve="all"/>
+		<type fullname="DG.Tweening.EaseFactory" preserve="all"/>
+		<type fullname="DG.Tweening.Tweener" preserve="all"/>
+		<type fullname="DG.Tweening.Tween" preserve="all"/>
+		<type fullname="DG.Tweening.Sequence" preserve="all"/>
+		<type fullname="DG.Tweening.TweenParams" preserve="all"/>
+		<type fullname="DG.Tweening.Core.ABSSequentiable" preserve="all"/>
+		<type fullname="DG.Tweening.Core.TweenerCore`3[UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions]" preserve="all"/>
+		<type fullname="DG.Tweening.TweenCallback" preserve="all"/>
+		<type fullname="DG.Tweening.TweenExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.AutoPlay" preserve="all"/>
+		<type fullname="DG.Tweening.AxisConstraint" preserve="all"/>
+		<type fullname="DG.Tweening.Ease" preserve="all"/>
+		<type fullname="DG.Tweening.LogBehaviour" preserve="all"/>
+		<type fullname="DG.Tweening.LoopType" preserve="all"/>
+		<type fullname="DG.Tweening.PathMode" preserve="all"/>
+		<type fullname="DG.Tweening.PathType" preserve="all"/>
+		<type fullname="DG.Tweening.RotateMode" preserve="all"/>
+		<type fullname="DG.Tweening.ScrambleMode" preserve="all"/>
+		<type fullname="DG.Tweening.TweenType" preserve="all"/>
+		<type fullname="DG.Tweening.UpdateType" preserve="all"/>
+		<type fullname="DG.Tweening.DOTween" preserve="all"/>
+		<type fullname="DG.Tweening.DOVirtual" preserve="all"/>
+		<type fullname="DG.Tweening.EaseFactory" preserve="all"/>
+		<type fullname="DG.Tweening.Tweener" preserve="all"/>
+		<type fullname="DG.Tweening.Tween" preserve="all"/>
+		<type fullname="DG.Tweening.Sequence" preserve="all"/>
+		<type fullname="DG.Tweening.TweenParams" preserve="all"/>
+		<type fullname="DG.Tweening.Core.ABSSequentiable" preserve="all"/>
+		<type fullname="DG.Tweening.Core.TweenerCore`3[UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions]" preserve="all"/>
+		<type fullname="DG.Tweening.TweenExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.UI">
+	    <type fullname="UnityEngine.UI.InputField+OnValidateInput" preserve="all"/>
+		<type fullname="UnityEngine.UI.ScrollRect+MovementType" preserve="all"/>
+		<type fullname="UnityEngine.UI.ScrollRect+MovementType" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
+	    <type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipeline" preserve="all"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="all"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipeline" preserve="all"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="all"/>
+		
+	</assembly>
+
+</linker>

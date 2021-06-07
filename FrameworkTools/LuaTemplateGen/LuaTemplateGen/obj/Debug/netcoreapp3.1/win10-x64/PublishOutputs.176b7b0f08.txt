@@ -1,0 +1,2 @@
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Debug\netcoreapp3.1\win10-x64\publish\LuaTemplateGen.pdb
+E:\work_SGL_1\arpg_game\FrameworkTools\LuaTemplateGen\LuaTemplateGen\bin\Debug\netcoreapp3.1\win10-x64\publish\LuaTemplateGen.exe
