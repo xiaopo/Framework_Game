@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b1712619bb00d4c972467b085e236f, type: 3}
+  m_Name: b_wlzl_02_Anims
+  m_EditorClassIdentifier: 
+  m_list:
+  - key: dead
+    name: b_wlzl_02_dead
+    clip: {fileID: 7400000, guid: c1d6d4e2447b04442bf36a0292a2c38e, type: 2}
+  - key: dizzy
+    name: b_wlzl_02_dizzy
+    clip: {fileID: 7400000, guid: 7983cd5b32f8e894ab241381d4e865a9, type: 2}
+  - key: getup
+    name: b_wlzl_02_getup
+    clip: {fileID: 7400000, guid: dd757f891844a3148a8f0ffbac8cdf35, type: 2}
+  - key: hitdown
+    name: b_wlzl_02_hitdown
+    clip: {fileID: 7400000, guid: 0ed0e6786eb8f2d4a98d880a6b08497f, type: 2}
+  - key: idle
+    name: b_wlzl_02_idle
+    clip: {fileID: 7400000, guid: 033370cd3030c4d4eb68744b2ac9193a, type: 2}
+  - key: run
+    name: b_wlzl_02_run
+    clip: {fileID: 7400000, guid: 7ebf399feefdae140a9f53154c9dfed7, type: 2}
+  - key: showidle
+    name: b_wlzl_02_showidle
+    clip: {fileID: 7400000, guid: 0f04048b7e5e80b4e8b0443c4d082119, type: 2}
+  - key: skill0
+    name: b_wlzl_02_skill0
+    clip: {fileID: 7400000, guid: 03305794617ec8a458c10f1f8d044ab0, type: 2}
+  - key: skill1
+    name: b_wlzl_02_skill1
+    clip: {fileID: 7400000, guid: fa5cadd36ba32734bbea430532b67216, type: 2}

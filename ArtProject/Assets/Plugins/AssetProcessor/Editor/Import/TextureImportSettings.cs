@@ -1,11 +1,8 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using UnityEditor;
-using UnityEditor.U2D;
 using UnityEngine;
-using UnityEngine.U2D;
+
 
 public class  TextureImportSettings : AssetPostprocessor
 {

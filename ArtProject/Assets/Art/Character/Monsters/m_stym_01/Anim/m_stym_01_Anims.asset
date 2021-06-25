@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b1712619bb00d4c972467b085e236f, type: 3}
+  m_Name: m_stym_01_Anims
+  m_EditorClassIdentifier: 
+  m_list:
+  - key: dead
+    name: m_stym_01_dead
+    clip: {fileID: 7400000, guid: 11060eb1ee109a349a100429292b7057, type: 2}
+  - key: dizzy
+    name: m_stym_01_dizzy
+    clip: {fileID: 7400000, guid: 432ccca2c080eb243b67af247f766b86, type: 2}
+  - key: getup
+    name: m_stym_01_getup
+    clip: {fileID: 7400000, guid: 4c0a95c5b930e47438d5452fa337567f, type: 2}
+  - key: hitdown
+    name: m_stym_01_hitdown
+    clip: {fileID: 7400000, guid: 0fa6b6c2919528446a63202764b763ec, type: 2}
+  - key: idle
+    name: m_stym_01_idle
+    clip: {fileID: 7400000, guid: 38edbe1647969be4f807ecad99da9baa, type: 2}
+  - key: run
+    name: m_stym_01_run
+    clip: {fileID: 7400000, guid: 2cc7046c385a62f4cad97b72508dc768, type: 2}
+  - key: showidle
+    name: m_stym_01_showidle
+    clip: {fileID: 7400000, guid: d3c3e7a6260c3734098516a92a028601, type: 2}
+  - key: skill0
+    name: m_stym_01_skill0
+    clip: {fileID: 7400000, guid: 922f88ac05ff5f54893d8ad67e92972b, type: 2}
+  - key: skill1
+    name: m_stym_01_skill1
+    clip: {fileID: 7400000, guid: 204e34fabd31000428fcba4d4aca595f, type: 2}

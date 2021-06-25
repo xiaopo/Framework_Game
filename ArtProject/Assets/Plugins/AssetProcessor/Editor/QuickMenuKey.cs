@@ -46,7 +46,7 @@ public class QuickMenuKey : ScriptableObject
     {
         UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
-        if(scene.name == "lanucher")
+        if (scene.name == "lanucher")
         {
             return;
         }
@@ -61,7 +61,7 @@ public class QuickMenuKey : ScriptableObject
         Object.DontDestroyOnLoad(xgame);
     }
 
-
+#if _Development
     [MenuItem("launcher/launcher-normal(Editor Lua)")]
     public static void LauncerNormal()
     {
@@ -101,7 +101,7 @@ public class QuickMenuKey : ScriptableObject
         EditorPrefs.SetBool(m_LaunchGameLuaEditor, true);
         EditorApplication.isPlaying = true;
     }
-
+#endif
     private static readonly string scenePath = "/Art/Scene/";
     public static void RefreshAllScene(bool isEditor = true)
     {
@@ -118,19 +118,19 @@ public class QuickMenuKey : ScriptableObject
         EditorBuildSettingsScene[] scenes = null;
         if (isEditor)
         {
-            scenes = new EditorBuildSettingsScene[files.Length+1];
+            scenes = new EditorBuildSettingsScene[files.Length + 1];
             scenes[0] = new EditorBuildSettingsScene("Assets/lanucher.unity", true);
 
             for (int i = 0; i < files.Length; ++i)
             {
-                string scenePath = files[i].Replace("\\", "/").Substring(Application.dataPath.Length-6);
-                scenes[i+1] = new EditorBuildSettingsScene(scenePath, true);
+                string scenePath = files[i].Replace("\\", "/").Substring(Application.dataPath.Length - 6);
+                scenes[i + 1] = new EditorBuildSettingsScene(scenePath, true);
 
             }
         }
         else
         {
-            scenes = new EditorBuildSettingsScene[1] 
+            scenes = new EditorBuildSettingsScene[1]
             {
                 new EditorBuildSettingsScene("Assets/lanucher.unity", true),
             };
