@@ -2,7 +2,7 @@
 --游戏地图切换逻辑
 --龙跃
 
-local CMapLoader = CS.Map.GameMapLoader()
+local CMapLoader = CS.Game.MScene.GameMapLoader()
 
 local GameMapLoader = {}
 

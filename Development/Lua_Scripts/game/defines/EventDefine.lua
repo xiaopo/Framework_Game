@@ -32,7 +32,12 @@ EventDefine.NETWORK_CHANGE					= guid:get()		--网络切换
 
 EventDefine.ETNER_LOGIN_SCENE				= guid:get()
 
+--进入游戏
+EventDefine.ENTER_GAME_MAP					= guid:get()
+
 -- 地图切换
 EventDefine.MAP_CUT_REQURE					= guid:get()--请求场景加载
 EventDefine.MAP_CUT_BEGIN					= guid:get()--场景加载开始
 EventDefine.MAP_CUT_DONE					= guid:get()--场景加载成功完毕
+
+

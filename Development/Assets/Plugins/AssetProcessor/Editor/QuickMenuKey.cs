@@ -61,7 +61,7 @@ public class QuickMenuKey : ScriptableObject
         Object.DontDestroyOnLoad(xgame);
     }
 
-
+#if _Development
     [MenuItem("launcher/launcher-normal(Editor Lua)")]
     public static void LauncerNormal()
     {
@@ -101,7 +101,7 @@ public class QuickMenuKey : ScriptableObject
         EditorPrefs.SetBool(m_LaunchGameLuaEditor, true);
         EditorApplication.isPlaying = true;
     }
-
+#endif
     private static readonly string scenePath = "/Art/Scene/";
     public static void RefreshAllScene(bool isEditor = true)
     {

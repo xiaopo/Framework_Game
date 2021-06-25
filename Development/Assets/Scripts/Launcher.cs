@@ -89,8 +89,17 @@ public partial class Launcher : MonoBehaviour
         //end 其他启动
 
         //--------------启动Lua-------------------
+
+
         LuaLauncher.Instance.EnterGame();
 
 
+    }
+
+    private void OnDestroy()
+    {
+#if UNITY_EDITOR
+        Game.MScene.GameMapLoader.DisposeAction();
+#endif
     }
 }

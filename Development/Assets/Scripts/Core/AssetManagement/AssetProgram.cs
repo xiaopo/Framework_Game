@@ -102,12 +102,11 @@ namespace AssetManagement
 
             if (Time.frameCount % Application.targetFrameRate == 0)
             {
+
                 //ºÏ≤È Õ∑≈
                 AssetRawobjCache.DumpTrash();
             }
-
         }
-
 
     }
 }

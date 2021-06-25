@@ -9,7 +9,7 @@ LoginView.prefab = 'gui_login_view.prefab'
 -- 视图所在层级
 LoginView.layer = UIDefine.UILayer_2D.ViewLayer
 
-local SingleSceneLoader = CS.Map.SingleSceneLoader()
+local SingleSceneLoader = CS.Game.MScene.SingleSceneLoader()
 
 function LoginView:on_initView()
 	base.on_initView(self)
@@ -17,15 +17,18 @@ function LoginView:on_initView()
 	--加载登录场景
 
 	SingleSceneLoader:Load("scene_00.unity")
-	
-	self:AddListener(self.inject.Button_enter,function ()
 
-		Dispatcher.dispatchEvent(EventDefine.MAP_CUT_REQURE,"SampleScene.unity")
-	end)
-	
 	SingleSceneLoader.LoadComplete = function ()
 		CS.LauncherGUIManager.Instance:DestroyAll()
 	end
+	
+			
+	self:AddListener(self.inject.Button_enter,function ()
+		
+		Dispatcher.dispatchEvent(EventDefine.ENTER_GAME_MAP)
+		Dispatcher.dispatchEvent(EventDefine.MAP_CUT_REQURE,"scene_maincity.unity")
+	end)
+	
 end
 
 function LoginView:on_open()

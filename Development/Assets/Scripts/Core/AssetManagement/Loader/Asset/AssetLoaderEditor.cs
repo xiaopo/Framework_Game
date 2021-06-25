@@ -99,12 +99,13 @@ namespace AssetManagement
             
         }
 
-        public override void Dispose()
+        public override void PDispose(AssetsGetManger protect)
         {
-            base.Dispose();
+            base.PDispose(protect);
 
             Resources.UnloadAsset(this._rawObject);
             _rawObject = null;
         }
+
     }
 }

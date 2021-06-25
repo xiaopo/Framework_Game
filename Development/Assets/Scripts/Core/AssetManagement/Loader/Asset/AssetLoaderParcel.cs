@@ -9,7 +9,8 @@ namespace AssetManagement
     public enum AssetType
     {
         Scene = 1,
-        Other = 2 
+        Other = 2,
+        Cancel = 3
     }
 
     public class AssetLoaderParcel:IAssetLoader
@@ -29,7 +30,6 @@ namespace AssetManagement
         protected bool _preloadDone = false;
         public bool isActive = false;
     
-
         public bool isFailed 
         {
             get { return _isFailed; }
@@ -79,6 +79,7 @@ namespace AssetManagement
                 //当 _asyncOperation != null 表明，正在从AssetBundle包里加载资源，下面加载AssetBundle的逻辑已经执行完毕
                 return;
             }
+
             string errorStr;
             BundleInfo abinfo = null;
             AssetbundleCache.Achieve(_abpath,out abinfo,out errorStr);//包括依赖加载完成
@@ -104,8 +105,10 @@ namespace AssetManagement
                     _preloadDone = true;
                     return;//预加载模式，只加载 AB资源
                 }
+                
             }
- 
+
+
             if (abinfo != null)
             {
 
@@ -179,8 +182,8 @@ namespace AssetManagement
 
         /// <summary>
         /// 包含2个结果
-        /// 1.加载成功
-        /// 2.加载失败
+        /// 加载成功
+        /// 加载失败
         /// </summary>
         /// <returns></returns>
         public override bool IsDone()
@@ -240,7 +243,18 @@ namespace AssetManagement
         }
         #endregion
 
-        public override void Dispose()
+        //取消加载
+        public virtual void CancelLoading()
+        {
+            AssetsGetManger.Instance.OnCancelLoading(this.assetName);
+        }
+
+
+        /// <summary>
+        /// 只能被管理器销毁
+        /// </summary>
+        /// <param name="protect"></param>
+        public virtual void PDispose(AssetsGetManger protect)
         {
             _asyncOperation = null;
             _isDownloading = false;

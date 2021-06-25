@@ -96,8 +96,31 @@ public class LuaLauncher:MonoBehaviour
         if (m_LuaEnv == null)
             return;
 
+#if UNITY_EDITOR
+        new System.Threading.Thread(() =>
+        {
+            System.Threading.Thread.Sleep(100);
+            UnityEditor.EditorApplication.delayCall += OnEditorDestroy;
+        }).Start();
+#else
+        DisposeLuaEnv();
+#endif
+    }
+
+    void DisposeLuaEnv()
+    {
+        if (m_LuaEnv == null)
+            return;
+
         m_LuaEnv.Dispose();
         m_LuaEnv = null;
+    }
+    void OnEditorDestroy()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorUtility.UnloadUnusedAssetsImmediate();
+#endif
+        DisposeLuaEnv();
     }
 
 }

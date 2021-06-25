@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Map
+namespace Game.MScene
 { 
     /// <summary>
     /// 登录阶段场景加载

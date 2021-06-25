@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
-public class GameObjectPool : MonoBehaviour
+public class GameObjectPool:MonoBehaviour
 {
     public class GameObjectInfo
     {
@@ -15,7 +14,7 @@ public class GameObjectPool : MonoBehaviour
     private static ObjectPool<Queue<GameObjectInfo>> s_QueuePool = new ObjectPool<Queue<GameObjectInfo>>(null, x => x.Clear());
     private Dictionary<string, Queue<GameObjectInfo>> m_PoolMap = new Dictionary<string, Queue<GameObjectInfo>>();
     public Dictionary<string, Queue<GameObjectInfo>> poolMap { get { return m_PoolMap; } }
-    private Transform m_Transform;
+
     private bool m_IsDestroy;
     //生命时长秒
     [SerializeField]
@@ -27,7 +26,6 @@ public class GameObjectPool : MonoBehaviour
     int m_FrameCount = 0;
 
 
-    void Awake() { m_Transform = transform; }
 
     public int typeCount { get { return m_PoolMap.Count; } }
 
@@ -74,16 +72,7 @@ public class GameObjectPool : MonoBehaviour
 
     public void Release(GameObject gameObject, string name)
     {
-        if (gameObject == null || gameObject.IsNull()) return;
-
-        if (m_IsDestroy)
-        {
-            //应该立即销毁
-
-            AssetManagement.AssetUtility.DestroyInstance(gameObject);
-
-            return;
-        }
+        if (m_IsDestroy || gameObject == null || gameObject.IsNull()) return;
 
         Queue<GameObjectInfo> queue;
         if (!m_PoolMap.TryGetValue(name, out queue))
@@ -96,7 +85,7 @@ public class GameObjectPool : MonoBehaviour
         info.p_GameObject = gameObject;
         info.p_ReleaseTime = Time.time;
         info.p_GameObject.SetActive(false);
-        info.p_GameObject.transform.SetParent(m_Transform);
+        info.p_GameObject.transform.SetParent(this.transform);
 
         queue.Enqueue(info);
     }
@@ -105,11 +94,9 @@ public class GameObjectPool : MonoBehaviour
 
     public void Update()
     {
-        if (!(++m_FrameCount % 60 == 0))
-            return;
         m_totalObjects = m_PoolMap.Count;
-        if (m_totalObjects < 1)
-            return;
+
+        if (m_totalObjects < 1) return;
 
         float now = Time.time;
         foreach (var pool in m_PoolMap)
@@ -121,7 +108,7 @@ public class GameObjectPool : MonoBehaviour
                 {
                     pool.Value.Dequeue();
 
-                    AssetManagement.AssetUtility.DestroyInstance(gameObject);
+                    AssetManagement.AssetUtility.DestroyInstance(info.p_GameObject);
 
                     info.p_GameObject = null;
                     info.p_ReleaseTime = -1;
@@ -152,22 +139,20 @@ public class GameObjectPool : MonoBehaviour
 
     }
 
-
-
-
     public void UnloadAll()
     {
         foreach (var pool in m_PoolMap)
         {
             foreach (var info in pool.Value)
             {
-                AssetManagement.AssetUtility.DestroyInstance(gameObject);
+                AssetManagement.AssetUtility.DestroyInstance(info.p_GameObject);
 
                 info.p_GameObject = null;
                 s_InfoPool.Release(info);
             }
             s_QueuePool.Release(pool.Value);
         }
+
         m_PoolMap.Clear();
     }
 

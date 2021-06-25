@@ -35,11 +35,13 @@ local function main()
         
     end)
 	
-	--进入登录
+	--进入登录界面
 	Dispatcher.dispatchEvent(EventDefine.ETNER_LOGIN_SCENE)
 	
 
 end
+
+
 
 
 

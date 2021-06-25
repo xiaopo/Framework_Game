@@ -337,9 +337,10 @@ public static class XLuaWarpGen
     [ReflectionUse]
     public static List<Type> MAP_LuaCallCSharp = new List<Type>()
     {
-        typeof(Map.LoadMapMode),
-        typeof(Map.GameMapLoader),
-        typeof(Map.SingleSceneLoader),
+        typeof(Game.MScene.LoadMapMode),
+        typeof(Game.MScene.GameMapLoader),
+        typeof(Game.MScene.SingleSceneLoader),
+        typeof(Game.MScene.MapfightProgram)
 
     };
     #endregion

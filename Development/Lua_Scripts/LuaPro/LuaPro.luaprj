@@ -6,7 +6,7 @@
             <LuaFile RelativePath=".\global.lua" />
             <LuaFile RelativePath=".\main.lua" />
             <LuaFile RelativePath=".\require.lua" />
-            <Filter RelativePath=".\components" Toggle="false" >
+            <Filter RelativePath=".\components" Toggle="true" >
                 <LuaFile RelativePath=".\ListTreeMxNView.lua" />
                 <LuaFile RelativePath=".\ListTreeMxNViewEx.lua" />
                 <LuaFile RelativePath=".\ListView.lua" />
@@ -27,7 +27,7 @@
                 <LuaFile RelativePath=".\TagDefine.lua" />
                 <LuaFile RelativePath=".\UIDefine.lua" />
             </Filter>
-            <Filter RelativePath=".\framework" Toggle="false" >
+            <Filter RelativePath=".\framework" Toggle="true" >
                 <LuaFile RelativePath=".\Command.lua" />
                 <LuaFile RelativePath=".\Context.lua" />
                 <LuaFile RelativePath=".\Dispatcher.lua" />
@@ -66,7 +66,7 @@
             </Filter>
             <Filter RelativePath=".\modules" Toggle="false" >
                 <LuaFile RelativePath=".\module_register.lua" />
-                <Filter RelativePath=".\loader" Toggle="false" >
+                <Filter RelativePath=".\loader" Toggle="true" >
                     <Filter RelativePath=".\views" Toggle="false" >
                         <LuaFile RelativePath=".\CommonLoadView.lua" />
                         <LuaFile RelativePath=".\MapLoaderView.lua" />
@@ -76,7 +76,7 @@
                     <LuaFile RelativePath=".\LoaderModule.lua" />
                     <LuaFile RelativePath=".\LoaderProxy.lua" />
                 </Filter>
-                <Filter RelativePath=".\login" Toggle="false" >
+                <Filter RelativePath=".\login" Toggle="true" >
                     <LuaFile RelativePath=".\LoginConfig.lua" />
                     <LuaFile RelativePath=".\LoginData.lua" />
                     <LuaFile RelativePath=".\LoginModule.lua" />
@@ -100,8 +100,10 @@
                         <LuaFile RelativePath=".\GameMapLoader.lua" />
                     </Filter>
                     <Filter RelativePath=".\views" Toggle="true" />
+                    <LuaFile RelativePath=".\MapfightProgram.lua" />
+                    <LuaFile RelativePath=".\MapftPath.lua" />
                 </Filter>
-                <Filter RelativePath=".\mainui" Toggle="false" >
+                <Filter RelativePath=".\mainui" Toggle="true" >
                     <LuaFile RelativePath=".\MainuiConfig.lua" />
                     <LuaFile RelativePath=".\MainuiData.lua" />
                     <LuaFile RelativePath=".\MainuiModule.lua" />
@@ -110,7 +112,7 @@
                         <LuaFile RelativePath=".\MainuiView.lua" />
                     </Filter>
                 </Filter>
-                <Filter RelativePath=".\pack" Toggle="false" >
+                <Filter RelativePath=".\pack" Toggle="true" >
                     <LuaFile RelativePath=".\PackConfig.lua" />
                     <LuaFile RelativePath=".\PackData.lua" />
                     <LuaFile RelativePath=".\PackModule.lua" />

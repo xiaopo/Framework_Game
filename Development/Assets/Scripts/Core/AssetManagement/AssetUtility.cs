@@ -1,9 +1,10 @@
-﻿using System;
+﻿//龙跃
+using System;
 using System.IO;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
+//加载资源使用接口
 namespace AssetManagement
 {
     public class AssetUtility
@@ -13,13 +14,13 @@ namespace AssetManagement
             return AssetsGetManger.Instance.GetLoadinger(assetName);
         }
 
-        public static AssetLoaderParcel LoadAsset<T>(string assetName, bool isUI = false)
+        public static AssetLoaderParcel LoadAsset<T>(string assetName)
         {
 
             return AssetsGetManger.Instance.LoadAsset(assetName, typeof(T));
         }
 
-        public static AssetLoaderParcel LoadAsset(string assetName, Type assetType,bool isUI = false)
+        public static AssetLoaderParcel LoadAsset(string assetName, Type assetType)
         {
 
             return AssetsGetManger.Instance.LoadAsset(assetName, assetType);
@@ -30,6 +31,8 @@ namespace AssetManagement
         {
             return AssetsGetManger.Instance.PreloadAsset(assetName, typeof(GameObject));
         }
+
+
 
         /// <summary>
         /// 解散一个RawObj的引用

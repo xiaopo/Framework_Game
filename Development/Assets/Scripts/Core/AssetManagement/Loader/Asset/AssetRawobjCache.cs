@@ -128,6 +128,34 @@ namespace AssetManagement
          
             }
         }
+
+
+        /// <summary>
+        /// 获得一个源对象。必须使用 DiscardRawobj 释放
+        /// </summary>
+        /// <param name="abPath"></param>
+        /// <param name="assetName"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public static T GetRawAsset<T>(string assetName) where T:Object
+        {
+            string _abpath = AssetProgram.Instance.loadOptions.GetABPathByAssetName(assetName);
+            if (string.IsNullOrEmpty(_abpath)) return null;
+
+            foreach(var item in rawAssets)
+            {
+                RawAsset rawInfo = item.Value;
+                if (rawInfo.abPath == _abpath && rawInfo.name == assetName)
+                {
+                    AddRefrence(rawInfo);
+                    return item.Key as T;
+                }
+            }
+
+            return null;
+        }
+
+
         /// <summary>
         /// 获得一个源对象。必须使用 DiscardRawobj 释放
         /// </summary>
