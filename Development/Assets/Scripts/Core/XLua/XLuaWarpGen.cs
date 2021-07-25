@@ -310,8 +310,8 @@ public static class XLuaWarpGen
     [ReflectionUse]
     public static List<Type> Network_LuaCallCSharp = new List<Type>()
     {
-        
-
+        typeof(NetWork.TcpClient),
+        typeof(NetWork.NetworkManager)
     };
 
 
@@ -319,7 +319,7 @@ public static class XLuaWarpGen
     [ReflectionUse]
     public static List<Type> Network_CSharpCallLua = new List<Type>()
     {
-     
+    
     };
     #endregion
 

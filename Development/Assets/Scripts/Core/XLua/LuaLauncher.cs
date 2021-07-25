@@ -25,12 +25,6 @@ public class LuaLauncher:MonoBehaviour
     public XLua.LuaEnv LuaEnv { get { return m_LuaEnv; } }
     private static LuaEnv m_LuaEnv;
     private string m_init = @"
-    local logger = CS.XLogger
-    _G.print_info = function(str)logger.INFO('[Lua]: '..str)end
-    _G.print_err  = function(str)logger.ERROR('[Lua]: '..str)end
-    _G.print_war  = function(str)logger.WARNING('[Lua]: '..str)end
-    _G.reportException  = function(name,message,stackTrace)logger.ReportException(name,message,stackTrace)end
-
     function class( base ,className)
             local c = {}
             if type(base) == 'table' then
@@ -61,8 +55,17 @@ public class LuaLauncher:MonoBehaviour
 
     public IEnumerator InitLuaEnv()
     {
+        //lua调用之前
+        
         m_Instance = this;
         m_LuaEnv = new LuaEnv();
+
+        m_LuaEnv.AddBuildin("rapidjson", XLua.LuaDLL.Lua.LoadRapidJson);
+        m_LuaEnv.AddBuildin("lpeg", XLua.LuaDLL.Lua.LoadLpeg);
+        m_LuaEnv.AddBuildin("pb", XLua.LuaDLL.Lua.LoadLuaProfobuf);
+        m_LuaEnv.AddBuildin("ffi", XLua.LuaDLL.Lua.LoadFFI);
+        m_LuaEnv.AddBuildin("protobuf.c", XLua.LuaDLL.Lua.LoadPbc);
+
         LuaLoader lloader = new LuaLoader();
         m_LuaEnv.AddLoader(lloader);
 
@@ -89,6 +92,8 @@ public class LuaLauncher:MonoBehaviour
     {
         if(m_LuaEnv != null)
             m_LuaEnv.Tick();
+
+       
     }
 
     public void OnDestroy()

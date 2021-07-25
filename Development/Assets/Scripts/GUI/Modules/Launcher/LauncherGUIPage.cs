@@ -25,9 +25,8 @@ public class LauncherGUIPage : LauncherUIBase
 
         m_progress = this.GetBindComponet<XProgressEffect>("ProgressBar");
 
-
-       
     }
+
     string formatstr = "<color=#{0}>{1}</color>";
     string formatstr2 = "<color=#{0}>{1}</color><color=#{2}>->{3}</color>";
     string color_green = "45e57a";//бл

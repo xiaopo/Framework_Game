@@ -21,6 +21,7 @@ public class LauncherGUIAlrt : LauncherUIBase
 
     protected override void Init()
     {
+
         m_text_msg = this.GetBindComponet<Text>("Text_msg");
         m_text_msg.color = Color.red;
         m_text_title = this.GetBindComponet<Text>("Text_title");

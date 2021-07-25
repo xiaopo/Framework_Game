@@ -1,5 +1,6 @@
 ﻿//龙跃
 using AssetManagement;
+using NetWork;
 using TPL;
 using UnityEngine;
 using UnityEngine.Events;
@@ -69,6 +70,7 @@ public partial class Launcher : MonoBehaviour
         TPLManager.Instance.Update();
 
         //游戏逻辑
+        
 
         //下载逻辑落后执行,确保自动卸载逻辑,不会卸载未执行的下载任务所需的资源
         AssetProgram.Instance.OnUpdate();
@@ -83,14 +85,11 @@ public partial class Launcher : MonoBehaviour
         GameDebug.Log("5.正在进入游戏...");
         LauncherGUIManager.Instance.UpdatePage.Mesage = "即将进入游戏";
 
-        //start 其他启动
+        //------------启动网络-----------------
+        NetworkManager.Instance.OnStart();
 
-
-        //end 其他启动
 
         //--------------启动Lua-------------------
-
-
         LuaLauncher.Instance.EnterGame();
 
 
@@ -98,8 +97,6 @@ public partial class Launcher : MonoBehaviour
 
     private void OnDestroy()
     {
-#if UNITY_EDITOR
-        Game.MScene.GameMapLoader.DisposeAction();
-#endif
+     
     }
 }

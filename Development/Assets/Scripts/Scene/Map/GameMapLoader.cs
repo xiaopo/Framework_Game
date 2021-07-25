@@ -23,34 +23,13 @@ namespace Game.MScene
     /// </summary>
     public class GameMapLoader
     {
-#if UNITY_EDITOR
-        public static List<GameMapLoader> action_collect;
 
-        public static void DisposeAction()
-        {
-            if(action_collect != null)
-            {
-                foreach(var item in action_collect)
-                {
-                    item.LoadComplete = null;
-                }
-            }
-        }
-#endif
         public ActionX LoadComplete
         { 
             get { return _loadComplete; } 
             set 
             {
-#if UNITY_EDITOR
-                if(Application.isEditor && value != null)
-                {
-                    if (action_collect == null) action_collect = new List<GameMapLoader>();
-            
-                    action_collect.Add(this);
-                }
-              
-#endif
+
                 _loadComplete = value; 
             } 
         }

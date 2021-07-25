@@ -91,12 +91,12 @@ namespace AssetManagement
         }
 
 
-        public static void GetWebAssetByte2(string path, string savePath, Action<DownloadHandler> loadDone = null, Action loadError = null)
+        public static void GetWebAssetByte2(string path, string savePath, Action<DownloadHandler> loadDone = null, Action loadError = null,int timeout = 2)
         {
 
             UnityWebRequest uwr = new UnityWebRequest(path);
             uwr.downloadHandler = new DownloadHandlerBuffer();
-
+            uwr.timeout = timeout;
             UnityWebRequestAsyncOperation uao = uwr.SendWebRequest();
 
             uao.completed += delegate (AsyncOperation aa) 
@@ -112,10 +112,11 @@ namespace AssetManagement
         /// 以字节方式下载 同时保存到本地
         /// </summary>
         /// <returns></returns>
-        public static IEnumerator GetWebAssetByte(string path, string savePath, Action<DownloadHandler> loadDone = null,Action loadError = null)
+        public static IEnumerator GetWebAssetByte(string path, string savePath, Action<DownloadHandler> loadDone = null,Action loadError = null, int timeout = 2)
         {
             using (UnityWebRequest uwr = new UnityWebRequest(path))
             {
+                uwr.timeout = timeout;
                 uwr.downloadHandler = new DownloadHandlerBuffer();
                 
                 yield return uwr.SendWebRequest();
@@ -123,10 +124,11 @@ namespace AssetManagement
             }
         }
 
-        public static IEnumerator GetWebTexture(string path, string savePath, Action<Sprite> loadDone = null)
+        public static IEnumerator GetWebTexture(string path, string savePath, Action<Sprite> loadDone = null, int timeout = 2)
         {
             using (UnityWebRequest uwr = new UnityWebRequest(path))
             {
+                uwr.timeout = timeout;
                 DownloadHandlerTexture texDl = new DownloadHandlerTexture(true);
                 uwr.downloadHandler = texDl;
 
