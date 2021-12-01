@@ -93,7 +93,7 @@ namespace AssetManagement
 
         public static void GetWebAssetByte2(string path, string savePath, Action<DownloadHandler> loadDone = null, Action loadError = null,int timeout = 2)
         {
-
+            GameDebug.Log("WebRequest: " + path);
             UnityWebRequest uwr = new UnityWebRequest(path);
             uwr.downloadHandler = new DownloadHandlerBuffer();
             uwr.timeout = timeout;

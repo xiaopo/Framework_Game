@@ -10,7 +10,7 @@ public class MainCameraController : MonoBehaviour
  
     void Start()
     {
-        this.transform.position = new Vector3(2, 2, 4);
+        this.transform.position = new Vector3(21.6f, 30.5f, 89);
         this.transform.rotation = Quaternion.Euler(16, -167, 0);
     }
 

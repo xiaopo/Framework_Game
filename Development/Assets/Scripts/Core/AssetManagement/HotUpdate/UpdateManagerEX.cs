@@ -40,6 +40,7 @@ namespace AssetManagement
             }, delegate ()
             {
                 string loadInfo = string.Format("无法链接资源服务器! {0},\n{1}", vpath, "请查看DownloadSetting.asset");
+                GameDebug.Log(loadInfo);
                 //无法下载记录文件
                 LauncherGUIManager.Instance.Alert(loadInfo);
             });
