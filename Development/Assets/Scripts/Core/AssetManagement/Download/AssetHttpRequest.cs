@@ -16,7 +16,7 @@ namespace AssetManagement
             None,//初始
             DataNullError,//错误
             MD5Error,//MD5错误
-            Loading,//下载中
+            Downloading,//下载中
             LoadFinish,//下载完成
             Completed,//等待释放
             Dispose
@@ -50,12 +50,13 @@ namespace AssetManagement
             _savePath = savePath;
             _reqest = new HttpRequest();
         }
-        
 
-        public virtual bool NeedSendRequest
+
+        protected virtual bool NeedSendRequest
         {
             get
-            {   
+            {
+                if (_webUrls.Count == 0) return false;
                 //只有初始状态，错误状态 可以开启下载
                 return _state == State.None || IsError;
             }
@@ -65,37 +66,51 @@ namespace AssetManagement
         {
             bool _remove = false;
 
-            if (HadNextChange)
+            //if (HadNextChange)
+            //{
+            //    if (IsError)
+            //    {
+            //        TellWhat();
+
+            //        if (NeedSendRequest)
+            //        {
+            //            TrySendRequest();//重新下载
+            //            GameDebug.LogGreen(string.Format("[{0}]{1} {2}", "AssetHttpRequest", "尝试更换下载 URL,再次下载！", _webRequest.url));
+            //        }
+            //        else
+            //            _remove = true;
+
+            //    }
+            //    else
+            //    {
+            //        if (NeedSendRequest) TrySendRequest();//开启下载
+            //    }
+
+            //}
+            //else
+            //{
+            //    if (IsError)
+            //    {
+            //        TellWhat();
+            //        _remove = true;
+            //    }
+            //}
+
+            if (IsError)
             {
-                if (IsError)
+                TellWhat();
+                if (HadNextChange && NeedSendRequest)
                 {
-                    TellWhat();
-
-                    if (NeedSendRequest)
-                    {
-                        TrySendRequest();//重新下载
-                        GameDebug.LogGreen(string.Format("[{0}]{1} {2}", "AssetHttpRequest", "尝试更换下载 URL,再次下载！", _webRequest.url));
-                    }
-                    else
-                        _remove = true;
-
+                    TrySendRequest();//重新下载
+                    GameDebug.LogGreen(string.Format("[{0}]{1} {2}", "AssetHttpRequest", "尝试更换下载 URL,再次下载！", _webRequest.url));
                 }
                 else
-                {
-                    if (NeedSendRequest) TrySendRequest();//开启下载
-                }
-
-            }
-            else
-            {
-                if (IsError)
-                {
-                    TellWhat();
                     _remove = true;
-                }
             }
+            else if (NeedSendRequest) TrySendRequest();//开启下载
 
-            if(_webRequest != null)
+
+            if (_webRequest != null)
                 _reqest.progress = _webRequest.downloadProgress;
 
             if (!_remove && IsSuccess)
@@ -110,11 +125,8 @@ namespace AssetManagement
         /// <summary>
         /// 开始
         /// </summary>
-        public virtual HttpRequest TrySendRequest()
+        protected virtual HttpRequest TrySendRequest()
         {
-            if (_webUrls.Count < 0) return _reqest;
-
-            if (_state != State.None && !IsError) return _reqest;
 
             if (_webRequest != null)//重复用不了
             {
@@ -130,7 +142,7 @@ namespace AssetManagement
             _webUrls.RemoveAt(0);
             EstablishRequest(_reqest.webUrl);
            
-            _state = State.Loading;
+            _state = State.Downloading;
 
             _webRequest.SendWebRequest();
 
@@ -147,10 +159,8 @@ namespace AssetManagement
 
 
         //管理器调用下载完成
-        public virtual bool TryDealData()
+        protected virtual bool TryDealData()
         {
-            if (_webRequest == null || _state != State.Loading) return false;
-
             _state = State.LoadFinish;
 
             if (OnVerifyData())
@@ -207,7 +217,7 @@ namespace AssetManagement
         /// <summary>
         /// 是否有在次下载的机会
         /// </summary>
-        public bool HadNextChange
+        protected bool HadNextChange
         {
 
             get
@@ -226,7 +236,7 @@ namespace AssetManagement
             get
             {
                 
-                if (_webRequest != null && _state == State.Loading)
+                if (_webRequest != null && _state == State.Downloading)
                 {
 #if UNITY_2020
                     return _webRequest.result == UnityWebRequest.Result.Success;

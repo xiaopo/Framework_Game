@@ -5,8 +5,8 @@ using UnityEngine.Networking;
 namespace AssetManagement
 {
     /// <summary>
-    /// 它将下载的字节直接写入文件，因此无论下载的文件大小如何，
     /// 内存使用量都很低
+    /// 它将下载的字节直接写入文件，因此无论下载的文件大小如何，
     /// </summary>
     public class AssetFileHttpRequest : AssetHttpRequest
     {
