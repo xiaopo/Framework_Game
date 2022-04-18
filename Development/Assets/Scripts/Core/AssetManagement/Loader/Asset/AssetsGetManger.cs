@@ -155,7 +155,7 @@ namespace AssetManagement
         /// 取消一个加载
         /// 注意：
         /// 1.资源载入内存会取消 
-        /// 2.AB载入内存不会需求
+        /// 2.AB载入内存不会取消
         /// </summary>
         public void OnCancelLoading(string assetName)
         {
@@ -167,7 +167,7 @@ namespace AssetManagement
 
                 loader.isActive = false;
                 //缓存起来
-                _assetLoadCompletes.Add(assetPath, loader);
+                //_assetLoadCompletes.Add(assetPath, loader);
 
             }
 

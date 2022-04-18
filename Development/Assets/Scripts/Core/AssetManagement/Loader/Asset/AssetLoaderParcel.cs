@@ -24,8 +24,8 @@ namespace AssetManagement
         protected AssetType _assetType;
         protected string _message;
 
-        protected bool _isDownloading = false;
-        protected bool _isLoading = false;
+        protected bool _isLoadingAB = false;
+        protected bool _isLoadingAssets = false;
         protected bool _isFailed = false;
         protected bool _preloadDone = false;
         public bool isActive = false;
@@ -38,8 +38,8 @@ namespace AssetManagement
                 _isFailed = value;
                 if (value)
                 {
-                    _isLoading = false;
-                    _isDownloading = false;
+                    _isLoadingAssets = false;
+                    _isLoadingAB = false;
                 }
             }
         }
@@ -93,12 +93,12 @@ namespace AssetManagement
                 return;
             }
 
-            if (_isDownloading)
+            if (_isLoadingAB)
             {
                 //等待加载 AssetBundle 包.......
                 if (abinfo == null) return;
 
-                _isDownloading = false;//assetBundle 包准备好了
+                _isLoadingAB = false;//assetBundle 包准备好了
 
                 if (IsPreload)
                 {
@@ -114,7 +114,7 @@ namespace AssetManagement
 
                 if (abinfo.ab.isStreamedSceneAssetBundle)
                 {
-                    _isLoading = true;
+                    _isLoadingAssets = true;
                     _assetType = AssetType.Scene;
                     //加载
                     //包里只有一个场景
@@ -131,7 +131,7 @@ namespace AssetManagement
                     _assetType = AssetType.Other;
                     if (abinfo.ab.Contains(_assetName))
                     {
-                        _isLoading = true;
+                        _isLoadingAssets = true;
                         //加载资源
                         try {
                              _asyncOperation = abinfo.ab.LoadAssetAsync(_assetName, _generateType);
@@ -156,7 +156,7 @@ namespace AssetManagement
             else
             {
 
-                _isDownloading = true;
+                _isLoadingAB = true;
 
                 //开启从磁盘里面加载AssetBundle包
                 AssetBundleManager.Instance.LoadAssetBundle(_abpath);
@@ -195,7 +195,7 @@ namespace AssetManagement
                 //加载资源完成
                 if(_asyncOperation.isDone || _assetType == AssetType.Scene)
                 {
-                    _isLoading = false;
+                    _isLoadingAssets = false;
                     return true;
                 }
             }
@@ -257,12 +257,12 @@ namespace AssetManagement
         public virtual void PDispose(AssetsGetManger protect)
         {
             _asyncOperation = null;
-            _isDownloading = false;
+            _isLoadingAB = false;
 
         }
 
         #region 状态方法
-        public bool IsDownloading {   get {  return _isDownloading; } }
+        public bool IsDownloading {   get {  return _isLoadingAB; } }
         public bool IsLoading { get { return false; } }
         #endregion
 

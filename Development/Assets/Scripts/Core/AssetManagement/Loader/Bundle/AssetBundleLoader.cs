@@ -92,7 +92,7 @@ namespace AssetManagement
         {
             try
             { 
-                return AssetBundle.LoadFromFileAsync(sdcard_path, crc);
+                return AssetBundle.LoadFromFileAsync(path, crc);
             }
             catch(Exception e)
             {
