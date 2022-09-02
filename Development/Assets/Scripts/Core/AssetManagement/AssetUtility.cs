@@ -78,12 +78,14 @@ namespace AssetManagement
 
             if (nothing)
             {
-                if (File.Exists(st_path))
-                {
-                    // APk 存在
-                    nothing = false;
-                    load_path = st_path;
-                }
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_IOS
+                if (File.Exists(st_path)) nothing = false; // 包内存在
+#elif UNITY_ANDROID
+                if (UpdateManager.Instance.IsBuildInAsset(abpath))  nothing = false; //包内存在
+#endif
+
+                if (!nothing) load_path = st_path;//是要build in 文件
+
             }
 
             downPath = down_path;

@@ -48,25 +48,27 @@ namespace AssetManagement
 
         }
         //本地加载
-        protected T LoadFile<T>(string fileName,bool needUnCompress = false)
+        protected T LoadFile<T>(string fileName,bool needUnCompress = false,int pathTag = -1)
         {
-       
-            string localvpath = Path.Combine(AssetDefine.ExternalSDCardsPath, fileName);
 
             string filestr = "";
-            if (File.Exists(localvpath))//扩展卡加载
-                filestr = File.ReadAllText(localvpath);
 
-           
-            if (string.IsNullOrEmpty(filestr))
+            if(pathTag == -1 || pathTag == 1)
             {
-                //apk 内加载
-                string sdvpth = Path.Combine(AssetDefine.BuildinAssetPath, fileName);
-                if (File.Exists(sdvpth))
-                {
-                    string error;
-                    filestr = SFileUtility.ReadStreamingFile(sdvpth, out error);
+                string localvpath = Path.Combine(AssetDefine.ExternalSDCardsPath, fileName);
+                if (File.Exists(localvpath))//扩展卡加载
+                    filestr = File.ReadAllText(localvpath);
+            }
 
+
+            if (pathTag == -1 || pathTag == 2)
+            {
+                if (string.IsNullOrEmpty(filestr))
+                {
+                    //apk 内加载
+                    string sdvpth = Path.Combine(AssetDefine.BuildinAssetPath, fileName);
+
+                    filestr = SFileUtility.ReadStreamingFile(sdvpth, out var error);
                 }
             }
 
@@ -101,12 +103,14 @@ namespace AssetManagement
             string sdCardPath = Path.Combine(AssetDefine.ExternalSDCardsPath, wbfile.path);
             if (!File.Exists(sdCardPath))
             {
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_IOS
                 string streamPath = Path.Combine(AssetDefine.BuildinAssetPath, wbfile.path);
-                if(!File.Exists(streamPath))
-                {
-                    needDown = true;
-                }
-                
+                if (!File.Exists(streamPath)) needDown = true;
+     
+#elif UNITY_ANDROID
+                if (!IsBuildInAsset(wbfile.path)) needDown = true;//包内不存在
+#endif
+
             }
 
             if (needDown) return;//本地不存在必须下载

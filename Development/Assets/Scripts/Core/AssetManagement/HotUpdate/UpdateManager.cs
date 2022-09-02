@@ -4,6 +4,7 @@ using FileStruct = XAssetsFiles.FileStruct;
 using FileOptions = XAssetsFiles.FileOptions;
 using System.Collections.Generic;
 using System.Threading;
+using System.IO;
 /// <summary>
 /// 热更新模块
 /// 步骤
@@ -29,9 +30,24 @@ namespace AssetManagement
         public const string versionFileName = "version.txt";
         public const string fileListFileName = "files.txt";
 
-        //本地文件可能是空，sdcard没有，streamAssets也没有
+        //本地文件可能是空，sdcard没有
         protected XVersionFile L_XVersionFile = null;
         protected XAssetsFiles L_XAssetFiles = null;
+
+        //streamAssets
+        protected XAssetsFiles B_XAssetFiles = null;
+        public XAssetsFiles BXAssetFiles { get { return B_XAssetFiles; } }
+        /// <summary>
+        /// Unity内部路径，由Assets开始
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public bool IsBuildInAsset(string path)
+        {
+            if (B_XAssetFiles.allFilesMap.TryGetValue(path, out var lofile)) return true;
+
+            return false;
+        }
         public XVersionFile LXVersionFile { get { return L_XVersionFile; } }
         public XAssetsFiles LXAssetsFiles { get { return L_XAssetFiles; } }
 
@@ -89,8 +105,15 @@ namespace AssetManagement
         #region 热更新逻辑.....
         protected void VersionAnalysis()
         {
-           
-            if(CompareVersion(L_XVersionFile, W_XVersionFile))
+            //加载首保内记录文件
+            B_XAssetFiles = LoadFile<XAssetsFiles>(fileListFileName, true,2);
+            if(B_XAssetFiles == null)
+            {
+                GameDebug.Log(string.Format("======================UpdateManager.VersionAnalysis {0}", "安装包错误，找不到file.txt文件"));
+                return;
+            }
+
+            if (CompareVersion(L_XVersionFile, W_XVersionFile))
             {
                 //有版本变化需要热更
                 //下载AB记录文件
@@ -106,6 +129,10 @@ namespace AssetManagement
                 GameDebug.Log(string.Format("======================UpdateManager.VersionAnalysis {0}", "没有版本变化!"));
                 //没有版本变化
                 //不需要下载网络AB记录文件和assetminifest文件, 以免造成本地加载错误
+                //直接是要本地AB记录文件
+                L_XAssetFiles = LoadFile<XAssetsFiles>(fileListFileName, true);
+                W_XAssetFiles = L_XAssetFiles;
+                
                 SignalActionTool.Check(OnNotvariety, Launcher.signalName);
 
             }
