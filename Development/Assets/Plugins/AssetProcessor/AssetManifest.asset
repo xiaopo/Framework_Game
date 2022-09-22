@@ -77,6 +77,8 @@ MonoBehaviour:
     m_AssetPath: Assets/GUI/Modules/Login/Images/zhdl_01.png
   - m_AssetName: zhdl_03.png
     m_AssetPath: Assets/GUI/Modules/Login/Images/zhdl_03.png
+  - m_AssetName: zjm_tb37_text.png
+    m_AssetPath: Assets/GUI/Modules/Login/Images/zjm_tb37_text.png
   - m_AssetName: gui_login_register.prefab
     m_AssetPath: Assets/GUI/Modules/Login/Prefabs/gui_login_register.prefab
   - m_AssetName: gui_login_view.prefab
@@ -99,8 +101,6 @@ MonoBehaviour:
     m_AssetPath: Assets/GUI/Modules/Mainui/Images/sc_bg_qipao.png
   - m_AssetName: zjm_tb05_text.png
     m_AssetPath: Assets/GUI/Modules/Mainui/Images/zjm_tb05_text.png
-  - m_AssetName: zjm_tb37_text.png
-    m_AssetPath: Assets/GUI/Modules/Mainui/Images/zjm_tb37_text.png
   - m_AssetName: gui_mainui_main.prefab
     m_AssetPath: Assets/GUI/Modules/Mainui/Prefabs/gui_mainui_main.prefab
   - m_AssetName: Atlas_Pack.spriteatlas
