@@ -44,6 +44,8 @@ namespace AssetManagement
         /// <returns></returns>
         public bool IsBuildInAsset(string path)
         {
+            if (B_XAssetFiles == null) return false;
+
             if (B_XAssetFiles.allFilesMap.TryGetValue(path, out var lofile)) return true;
 
             return false;
@@ -107,11 +109,16 @@ namespace AssetManagement
         {
             //加载首保内记录文件
             B_XAssetFiles = LoadFile<XAssetsFiles>(fileListFileName, true,2);
+
+#if !UNITY_EDITOR
             if(B_XAssetFiles == null)
             {
-                GameDebug.Log(string.Format("======================UpdateManager.VersionAnalysis {0}", "安装包错误，找不到file.txt文件"));
+                string loadInfo = string.Format("======================UpdateManager.VersionAnalysis {0}", "安装包错误，找不到file.txt文件");
+                LauncherGUIManager.Instance.Alert(loadInfo);
+                GameDebug.Log(loadInfo);
                 return;
             }
+#endif
 
             if (CompareVersion(L_XVersionFile, W_XVersionFile))
             {
@@ -223,14 +230,14 @@ namespace AssetManagement
             OnBackGorundDownLoadAnlysis();
         }
 
-        #endregion
+#endregion
 
         protected void StartGame()
         {
             update_done.Invoke();//开始游戏
         }
 
-        #region 资源后台下载逻辑
+#region 资源后台下载逻辑
         protected void OnNotvariety()
         {
 
@@ -297,7 +304,7 @@ namespace AssetManagement
                 BackDownloadManager.Instance.Start(needStartDown);//开启后台下载
             }), null);//通知主线程
         }
-        #endregion
+#endregion
         public void Update()
         {
             if (!b_start) return;
